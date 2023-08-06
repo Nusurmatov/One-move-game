@@ -49,7 +49,6 @@ public class Game
         }
         return move;
     }
-
     private bool IsValidMove(string move) => int.TryParse(move, out int moveIndex) && moveIndex > 0 && moveIndex <= this.Rules.Moves.Length;
 
     private void PrintMoves(string[] moves)
@@ -60,7 +59,6 @@ public class Game
         AnsiConsole.MarkupLine("[yellow]0[/] - [magenta]exit[/]");
         AnsiConsole.MarkupLine("[yellow]?[/] - [magenta]help[/]");
     }
-
     private void PrintWinner(string hmacKey, string randomMove, string playerMove)
     {
         playerMove = this.Rules.Moves[int.Parse(playerMove)-1];
